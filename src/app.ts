@@ -56,7 +56,7 @@ app.message(async ({ message }) => {
   }
   //Ignore all messages that don't start with $bb, and when trivia mode is not active
   if (
-    !message.text.toLowerCase().startsWith("$bb") &&
+    !message.text.toLowerCase().startsWith(hotword) &&
     TriviaProvider.triviaActive() == false
   ) {
     //Optional check for non $bb messages
